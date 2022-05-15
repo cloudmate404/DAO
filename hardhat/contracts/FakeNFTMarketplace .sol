@@ -7,7 +7,7 @@ contract FakeNFTMarketplace{
     mapping(uint => address) public tokens;
 
     // price of each FAke NFT
-    uint nftPrice = 0.01 ether;
+    uint nftPrice = 0.001 ether;
 
     //create a function that executes purchase and assigns ownership of a the bought token to the caller
     function purchase(uint _tokenId) external payable {
@@ -20,10 +20,14 @@ contract FakeNFTMarketplace{
         return nftPrice;
     }
 
-    // create function that checks whether the given tokenId has already been sold or not
-    function available(uint _tokenId) external view returns (bool){
-        if(tokens[_tokenId] == address(0)){
+    /// @dev available() checks whether the given tokenId has already been sold or not
+    /// @param _tokenId - the tokenId to check for
+    function available(uint256 _tokenId) external view returns (bool) {
+        // address(0) = 0x0000000000000000000000000000000000000000
+        // This is the default value for addresses in Solidity
+        if (tokens[_tokenId] == address(0)) {
             return true;
         }
+        return false;
     }
 }

@@ -17,7 +17,7 @@ async function main() {
     CRYPTO_DEVS_NFT_CONTRACT_ADDRESS,
     {
       // Change this value as you want
-      value: ethers.utils.parseEther("0.01"),
+      value: ethers.utils.parseEther("0.005"),
     }
   );
   await cryptoDevsDAO.deployed();
@@ -31,10 +31,5 @@ main()
     process.exit(1);
   });
 
-// ALCHEMY_API_KEY_URL = "https://eth-goerli.alchemyapi.io/v2/NtwSByKmv68UiwyPNiJgPLQQ2ZCMPmhl"
-// FakeNFTMarketplace deployed at 0x6E34729Ddf26643Cc2abFCf209947fBe1852E5B7
-// CryptoDevsDAO deployed at 0xcFbBdd0148f45043860eA9D05d915eead4feEfaC
-
-// Rinkeby
-// FakeNFTMarketplace deployed at 0x7c54b8E925E9ab26e5fEbAa56d2748dB80beE71A
-// CryptoDevsDAO deployed at 0x1dBF12cDde49115e04b85325c08F243c5E639076
+// FakeNFTMarketplace deployed at 0xDb317981fDE23d7Dd027d2c85f9BdAB723499e58
+// CryptoDevsDAO deployed at 0x4130b2a28dacDd33D6FcA54C412599bCe3F6fe27
